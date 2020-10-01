@@ -15,8 +15,8 @@ public class MultiMaxTest {
 
     @Test
     public void whenFirstMax() {
-        int result = MultiMax.max(10, 4, 2);
-        assertThat(result, is(10));
+        int result = MultiMax.max(100, 4, 2);
+        assertThat(result, is(100));
     }
 
     @Test
