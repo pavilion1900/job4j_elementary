@@ -10,36 +10,43 @@ public class MaxTest {
 
     @Test
     public void whenMax1To2Then2() {
-        int left = 1;
-        int right = 2;
-        int expected = 2;
-        int out = Max.max(left, right);
-        Assert.assertEquals(expected, out);
+        Max maximum = new Max();
+        int out = maximum.max(1, 2);
+        Assert.assertEquals(2, out);
     }
 
     @Test
     public void whenMax10To2Then10() {
-        int left = 10;
-        int right = 2;
-        int expected = 10;
-        int out = Max.max(left, right);
-        Assert.assertEquals(expected, out);
+        Max maximum = new Max();
+        int out = maximum.max(10, 2);
+        Assert.assertEquals(10, out);
     }
 
     @Test
     public void whenMax10To20Then20() {
-        int left = 10;
-        int right = 20;
-        int out = Max.max(left, right);
+        Max maximum = new Max();
+        int out = maximum.max(10, 20);
         assertThat(out, is(20));
     }
 
     @Test
     public void whenMax10To10Then10() {
-        int left = 10;
-        int right = 10;
-        int expected = 10;
-        int out = Max.max(left, right);
-        Assert.assertEquals(expected, out);
+        Max maximum = new Max();
+        int out = maximum.max(10, 10);
+        Assert.assertEquals(10, out);
+    }
+
+    @Test
+    public void whenMax40() {
+        Max maximum = new Max();
+        int out = maximum.max(10, 30, 40);
+        Assert.assertEquals(40, out);
+    }
+
+    @Test
+    public void whenMax50() {
+        Max maximum = new Max();
+        int out = maximum.max(50, 30, 40, 10);
+        Assert.assertEquals(50, out);
     }
 }
