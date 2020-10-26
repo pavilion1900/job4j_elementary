@@ -12,13 +12,12 @@ public class Matches {
         while (matches > 0) {
             System.out.print("Ваш ход ");
             int select = Integer.valueOf(input.nextLine());
-            if (select > 0 && select <= 3 && count % 2 == 1) {
-                System.out.println("Игрок №1 взял " + select + " спичку/спички");
-                matches -= select;
-                count++;
-                System.out.println("Осталось " + matches + " спичек");
-            } else if (select > 0 && select <= 3 && count % 2 == 0) {
-                System.out.println("Игрок №2 взял " + select + " спичку/спички");
+            if (select > 0 && select <= 3) {
+                if (count % 2 == 1) {
+                    System.out.println("Игрок №1 взял " + select + " спичку/спички");
+                } else {
+                    System.out.println("Игрок №2 взял " + select + " спичку/спички");
+                }
                 matches -= select;
                 count++;
                 System.out.println("Осталось " + matches + " спичек");
